@@ -31,7 +31,10 @@ namespace Mission9Assignment_cgp27.Controllers
 
                 PageInfo = new PageInfo()
                 {
-                    TotalNumBooks = repo.Books.Count(),
+                    TotalNumBooks =
+                        (bookType == null
+                            ? repo.Books.Count()
+                            : repo.Books.Where(x => x.Category == bookType).Count()),
                     BooksPerPage = pageSize,
                     CurrentPage = pageNum
                 }
