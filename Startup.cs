@@ -35,6 +35,7 @@ namespace Mission9Assignment_cgp27
             });
 
             services.AddScoped<IBookstoreRepository, EFBookstoreRepository>();
+            services.AddScoped<IPurchaseRepository, EFPurchaseRepository>();
             services.AddRazorPages();
 
             services.AddDistributedMemoryCache();

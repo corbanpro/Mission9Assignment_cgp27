@@ -19,7 +19,8 @@ namespace Mission9Assignment_cgp27.Models
         {
         }
 
-        public virtual DbSet<Book> Books { get; set; }
+        public DbSet<Book> Books { get; set; }
+        public DbSet<Purchase> Purchases { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
